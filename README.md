@@ -116,6 +116,7 @@ This Sign Up Page allows users to sign up for this authentication service.
 <% end %>
 ```
 ### New User
+```ruby
 <h1>Login</h1>
 <div>
 <%= form_tag '/login' do %>   <%= label_tag :username%>
@@ -124,6 +125,7 @@ This Sign Up Page allows users to sign up for this authentication service.
 <%= password_field_tag :password%>
 <%= submit_tag "Login"%><%end%>
 </div>
+```
 ## User Controllers
 ### User Controller
 ### Application Controller
