@@ -98,9 +98,32 @@ end
 ## Views
 Using the views module to share data with controllers and model.
 ### Sign Up Page 
+This Sign Up Page allows users to sign up for this authentication service. 
+```ruby
+  <div>
+    <%= form_tag :email %>
+    <%= text_email_field :email, required: true %>
+  </div>
+  <div>
+    <%= form_tag :password %>
+    <%= text_password_field :password, required: true %>
+  </div>
+  <div>
+    <%= form_tag :password_confirmation %>
+    <%= text_password_field :password_confirmation, required: true %>
+  </div>
+  <%= form_submit "Sign Up" %>
+<% end %>
+```
 ### New User
-### Confirmation Page 
-
+<h1>Login</h1>
+<div>
+<%= form_tag '/login' do %>   <%= label_tag :username%>
+<%= text_field_tag :username %>
+<%= label_tag :password%>
+<%= password_field_tag :password%>
+<%= submit_tag "Login"%><%end%>
+</div>
 ## User Controllers
 ### User Controller
 ### Application Controller
