@@ -126,7 +126,16 @@ This Sign Up Page allows users to sign up for this authentication service.
 <%= submit_tag "Login"%><%end%>
 </div>
 ```
-## User Controllers
-### User Controller
-### Application Controller
-### Session Controller
+## Mailers
+Using the mailer module to send out emails like confirmation emails or password reset emails. 
+```ruby
+class UserMailer < ApplicationMailer
+  ...
+  def password_reset(user, password_reset_token)
+    @user = user
+    @password_reset_token = password_reset_token
+
+    mail to: @user.email, subject: "Password Reset Instructions"
+  end
+end
+```
