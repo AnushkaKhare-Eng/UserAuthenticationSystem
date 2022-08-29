@@ -1,7 +1,7 @@
 # UserAutheticationSystem
 A User Authentication System developed using Rails 
 ## Gemfile
-Starting off with building a Gemfile and installing all necesarry Rails Packages. We also installed the bundler to ensure that the bundler unstaller will install any missing gems and download updates to existing gems. 
+Starting off with building a Gemfile and installing all necesarry Rails Packages. Also install the bundler to ensure that the bundler installer will install any missing gems and download updates to existing gems. 
 ```ruby
 #Installing Rails packages required and bundle installer
 
@@ -11,7 +11,7 @@ bundle install
 
 ```
 ## User Model and Creating a database
-Then we will create models for authenticating users
+Creating models for authenticating users
 ```ruby
 #Creating a user model
 
@@ -67,7 +67,7 @@ class User < ApplicationRecord
 end
 ```
 #### 2. Adding validation and callbacks
-In this step we ensure that the data saved is not null and assign unqiue email addresses to the users. We then perform format validation before the email is stored in the database
+Ensure that the data saved is not null and assign unqiue email addresses to the users. Then perform format validation before the email is stored in the database
 ```ruby 
 
 ## Migrating Database
@@ -87,10 +87,13 @@ rails g controller Users
 
 ```
 ## Routes 
+Using the routing module for URL rewrittting. Adding the custom URLS for the for example Sign Up page, New User page, Confirmation Page, etc. 
 ## Views
-### Welcome Page
+Using the views module to share data with controllers and model.
 ### Sign Up Page 
 ### New User
+### Confirmation Page 
+
 ## User Controllers
 ### User Controller
 ### Application Controller
