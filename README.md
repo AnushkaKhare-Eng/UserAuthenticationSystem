@@ -88,6 +88,13 @@ rails g controller Users
 ```
 ## Routes 
 Using the routing module for URL rewrittting. Adding the custom URLS for the for example Sign Up page, New User page, Confirmation Page, etc. 
+```ruby
+Rails.application.routes.draw do
+  root "static_pages#home"
+  post "sign_up", to: "sessions#create"
+  get "sign_up", to: "sessions#new"
+end
+```
 ## Views
 Using the views module to share data with controllers and model.
 ### Sign Up Page 
